@@ -1,6 +1,6 @@
 # nextparty
 
-Partybutton demo for next.js
+[Partybutton](https://partybutton.papercorp.org/) demo for next.js
 
 # Setup
 
