@@ -1,0 +1,23 @@
+{
+  "name": "nextparty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "simple-server": "npm install --prefix simple/server && nodemon simple/server/index",
+    "custom-server": "npm install --prefix custom/server && nodemon custom/server/index",
+    "payload-server": "npm install --prefix payload/server && nodemon payload/server/index",
+    "simple-client": "npm install --prefix simple/client && npm run dev --prefix simple/client",
+    "custom-client": "npm install --prefix custom/client && npm run dev --prefix custom/client",
+    "payload-client": "npm install --prefix payload/client && npm run dev --prefix payload/client",
+    "simple": "concurrently \"npm run simple-server\" \"npm run simple-client\"",
+    "custom": "concurrently \"npm run custom-server\" \"npm run custom-client\"",
+    "payload": "concurrently \"npm run payload-server\" \"npm run payload-client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.18"
+  }
+}
